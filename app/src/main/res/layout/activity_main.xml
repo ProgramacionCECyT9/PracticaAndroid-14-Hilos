@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#ffe8eeff"
-    android:padding="10dp">
+    android:background="#BBDEFB">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -15,11 +14,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Ingresa un número pra calcular su factorial y la posición N de la serie de fibonacci"
-            android:id="@+id/textView"
-            android:textSize="18sp"
-            android:padding="10dp"
-            android:textColor="#353535" />
+            android:text="Ingresa un número a calcular"
+            android:id="@+id/textViewInstrucciones"
+            android:textSize="24dp"
+            android:padding="20dp"
+            android:textColor="#fefefe"
+            android:background="#2196F3"
+            android:textIsSelectable="false" />
     </LinearLayout>
 
     <LinearLayout
@@ -28,43 +29,93 @@
         android:orientation="horizontal"
         android:paddingTop="15dp">
 
-        <EditText
-
-            android:id="@+id/entrada"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:inputType="numberDecimal"
-            android:text="5"
-            android:layout_gravity="center_vertical"
-            android:paddingLeft="15dp"
-            android:textSize="18sp"
-            android:textColor="#353535"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="0.7">
 
-            <requestFocus />
-        </EditText>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:onClick="calcularOperacion"
-            android:text="Calcular"
-            android:singleLine="true"
-            android:background="#ff3ee7a3"
-            android:padding="15dp"
-            android:textSize="18sp"
-            android:textColor="#353535"
-            android:layout_weight="0.3"
-            android:id="@+id/Button" />
+            <EditText
+
+                android:id="@+id/entrada"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:text="5"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:textSize="20sp"
+                android:textColor="#252525">
+
+                <requestFocus />
+            </EditText>
+        </LinearLayout>
 
     </LinearLayout>
 
-    <TextView
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
 
-        android:id="@+id/salida"
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="calcularFactorial"
+            android:text="Factorial"
+            android:singleLine="true"
+            android:background="#42A5F5"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:textColor="#353535"
+            android:id="@+id/ButtonFactorial"
+            android:layout_weight="40" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Fibonacci"
+            android:id="@+id/buttonFibonacci"
+            android:singleLine="true"
+            android:background="#42A5F5"
+            android:textSize="18sp"
+            android:textColor="#353535"
+            android:padding="15dp"
+            android:layout_weight="30"
+            android:onClick="calcularFibonacci" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Ambos"
+            android:id="@+id/buttonAmbos"
+            android:singleLine="true"
+            android:background="#42A5F5"
+            android:textSize="18sp"
+            android:textColor="#353535"
+            android:padding="15dp"
+            android:layout_weight="30"
+            android:onClick="calculaAmbos" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text=" "
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:padding="15dp" />
+        android:layout_marginTop="15dp">
+
+        <TextView
+
+            android:id="@+id/salida"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=" "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="18sp"
+            android:textIsSelectable="false"
+            android:padding="15dp"
+            android:textColor="#252525" />
+    </LinearLayout>
 
 </LinearLayout>

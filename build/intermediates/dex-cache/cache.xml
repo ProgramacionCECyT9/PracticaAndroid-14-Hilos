@@ -2,32 +2,32 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Alumno\Documents\GitHub\Android-Projects\Practica-14-Hilos-Factorial-&amp;-Fibonacci\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.0.0\classes.jar"
+        jar="C:\Users\Alumno\Documents\GitHub\Android-14-Hilos\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\libs\internal_impl-22.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
-        <dex dex="C:\Users\Alumno\Documents\GitHub\Android-Projects\Practica-14-Hilos-Factorial-&amp;-Fibonacci\app\build\intermediates\pre-dexed\release\classes-6e72ed6c2439df43b6fa4996ffd77cd614c775fb.jar" />
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="C:\Users\Alumno\Documents\GitHub\Android-14-Hilos\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-1981ef5fb2aab73c66b25167663f1cd484fd3b2b.jar" />
     </item>
     <item
-        jar="C:\Users\Alumno\Documents\GitHub\Android-Projects\Practica-14-Hilos-Factorial-&amp;-Fibonacci\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\classes.jar"
+        jar="C:\Users\Alumno\Documents\GitHub\Android-14-Hilos\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
-        <dex dex="C:\Users\Alumno\Documents\GitHub\Android-Projects\Practica-14-Hilos-Factorial-&amp;-Fibonacci\app\build\intermediates\pre-dexed\release\classes-53bba57dbf668bfde82c5bbcf938f363a14b4c26.jar" />
+        <dex dex="C:\Users\Alumno\Documents\GitHub\Android-14-Hilos\app\build\intermediates\pre-dexed\debug\classes-f74d3213c53c3b71be8d9fc322608fb0a76bf4ec.jar" />
+    </item>
+    <item
+        jar="C:\Users\Alumno\Documents\GitHub\Android-14-Hilos\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="C:\Users\Alumno\Documents\GitHub\Android-14-Hilos\app\build\intermediates\pre-dexed\debug\classes-ab4ad6f9eb0f89b4d5f32e3e5bea0ea18ecc3e3e.jar" />
     </item>
     <item
         jar="C:\Users\Alumno\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
-        <dex dex="C:\Users\Alumno\Documents\GitHub\Android-Projects\Practica-14-Hilos-Factorial-&amp;-Fibonacci\app\build\intermediates\pre-dexed\release\support-annotations-22.0.0-44d7086cc796a913f358a8396668e52900baafd0.jar" />
-    </item>
-    <item
-        jar="C:\Users\Alumno\Documents\GitHub\Android-Projects\Practica-14-Hilos-Factorial-&amp;-Fibonacci\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\libs\internal_impl-22.0.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
-        <dex dex="C:\Users\Alumno\Documents\GitHub\Android-Projects\Practica-14-Hilos-Factorial-&amp;-Fibonacci\app\build\intermediates\pre-dexed\release\internal_impl-22.0.0-50e42267e19c4972c7c30ee87c61cd0e8eb43495.jar" />
+        <dex dex="C:\Users\Alumno\Documents\GitHub\Android-14-Hilos\app\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-44d7086cc796a913f358a8396668e52900baafd0.jar" />
     </item>
 
 </items>

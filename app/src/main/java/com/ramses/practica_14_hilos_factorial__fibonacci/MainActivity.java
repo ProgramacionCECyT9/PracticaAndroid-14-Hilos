@@ -43,18 +43,39 @@ public class MainActivity extends Activity {
     }
 
       //Método para calcular las operacionesa
-    public void calcularOperacion(View view) {
+    public void calculaAmbos(View view) {
+        salida.setText("");
         int n = Integer.parseInt(entrada.getText().toString());
 
-        //Manda a llamar a la clase Fibonacci para calcular la n posicion de la serie de fibonacci
-        //Utilizando Thread
-        Fibonacci fibonacci = new Fibonacci(n);
-        fibonacci.start();
-
-        //Manda a llamar a la clase Factorial para calcular el factoria lde n
+        //Manda a llamar a la clase Factorial
         Factorial calculaFactorial = new Factorial();
         calculaFactorial.execute(n);
 
+        //Manda a llamar a la clase Fibonacci
+        //Utilizando Thread
+        Fibonacci fibonacci = new Fibonacci(n);
+        fibonacci.start();
+    }
+
+    //Método para calcular la sucesión de fibonacci utilizando la clase AsyncTask
+    public void calcularFactorial(View view){
+        salida.setText("");
+        int n = Integer.parseInt(entrada.getText().toString());
+
+        //Manda a llamar la clase Factorial
+        Factorial calculaFactorial = new Factorial();
+        calculaFactorial.execute(n);
+    }
+
+    //Método para calcular el número factorial utilizando la clase Thread
+    public void calcularFibonacci(View view){
+        salida.setText("");
+        int n = Integer.parseInt(entrada.getText().toString());
+
+        //Manda a llamar a la clase Fibonacci
+        //Utilizando Thread
+        Fibonacci fibonacci = new Fibonacci(n);
+        fibonacci.start();
     }
 
     //  Empleamos  AsyncTask whit progressdialog cancel para calcular el factorial
@@ -85,7 +106,7 @@ public class MainActivity extends Activity {
             int factorial = 1;
             for (int i = 1; i <= n[0] && !isCancelled(); i++) {
                 factorial *= i;
-                SystemClock.sleep(300);
+                SystemClock.sleep(200);
                 publishProgress(i * 100 / n[0]);
             }
             return factorial;
@@ -99,7 +120,7 @@ public class MainActivity extends Activity {
         @Override
         protected void onPostExecute(Integer factorial) {
             progreso.dismiss();
-            salida.append("\n\nFactorial de "+entrada.getText().toString()+" es:  "+String.valueOf(factorial) + "\n");
+            salida.append("\nFactorial de "+entrada.getText().toString()+" es:  "+String.valueOf(factorial) + "\n");
         }
 
         @Override
@@ -109,9 +130,30 @@ public class MainActivity extends Activity {
     }
 
     class Fibonacci extends Thread {
-        private int n, num1, num2;
+        private int n;
         public Fibonacci(int n) {
-            this.n = n;
+            this.n=n;
+        }
+        //Método que permite obtener la sucesion de fibonacci hasta la posicion n
+        public int[] CalculaFibonacci (int n){
+            int fibonacci[] = new int[n];
+            if(n==1 || n==0){
+                fibonacci[0] =1;
+            }else if(n>2) {
+                fibonacci[0]=1;
+                fibonacci[1]=1;
+                for (int i=2; i<n; i++) {
+                    fibonacci[i]=fibonacci[i-1]+fibonacci[i-2];
+                }
+            }
+            return fibonacci;
+        }
+        //Método que imprime la sucesión de fibonacci en la pantalla
+        public void imprimeFibonacci(int[] fibonacci){
+            for(int i=0; i<fibonacci.length; i++){
+                salida.append(String.valueOf(+fibonacci[i]+", "));
+                //SystemClock.sleep(500);
+            }
         }
 
         @Override
@@ -119,23 +161,9 @@ public class MainActivity extends Activity {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    num1=1;
-                    num2 =1;
-                    if(n==1){
-                        salida.append("\nEl primero número de la serie de Fibonacci es:\n 1\n");
-                    }else if(n==2){
-                        salida.append("\nLos primeros" +n+" números de la serie de Fibonacci son:\n");
-                        salida.append("1, 1");
-                    }else if(n>2) {
-                        salida.append("\n\nLos primeros "+ n +" números de la serie de Fibonacci son: \n");
-                        salida.append(String.valueOf(num1)+", ");
-                        for (int i = 2; i <= n; i++) {
-                            salida.append(String.valueOf(num2+", "));
-                            num2 = num1+num2;
-                            num1=num2-num1;
-                        }
-
-                    }
+                    salida.append("\nSucesión de fibonacci hasta "+n+":\n");
+                    imprimeFibonacci(CalculaFibonacci(n));
+                    salida.append("\n");
                 }
             });
         }
